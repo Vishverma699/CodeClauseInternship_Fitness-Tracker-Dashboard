@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comprehensive Fitness Tracker Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="dashboard">
+        <h1>Fitness Tracker Dashboard</h1>
+
+        <!-- User Input Section -->
+        <div class="user-input">
+            <h2>Enter your fitness data</h2>
+            <label for="age">Age:</label>
+            <input type="number" id="age" placeholder="Your age">
+            <br>
+            <label for="gender">Gender:</label>
+            <select id="gender">
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+            </select>
+            <br>
+            <label for="weight">Weight (kg):</label>
+            <input type="number" id="weight" placeholder="Your weight">
+            <br>
+            <label for="height">Height (cm):</label>
+            <input type="number" id="height" placeholder="Your height">
+            <br>
+            <label for="steps-today">Steps Today:</label>
+            <input type="number" id="steps-today" placeholder="Steps today">
+            <br>
+            <label for="calories-burned">Calories Burned Today:</label>
+            <input type="number" id="calories-burned" placeholder="Calories burned today">
+            <br>
+            <label for="water-intake">Water Intake (ml):</label>
+            <input type="number" id="water-intake" placeholder="Water intake today">
+            <br>
+            <button onclick="updateStats()">Update Statistics</button>
+        </div>
+
+        <!-- Statistics Section -->
+        <div class="stats">
+            <h2>Your Daily Statistics</h2>
+            <p>Age: <span id="display-age">0</span></p>
+            <p>Gender: <span id="display-gender">Unknown</span></p>
+            <p>Weight: <span id="display-weight">0</span> kg</p>
+            <p>Height: <span id="display-height">0</span> cm</p>
+            <p>BMI: <span id="display-bmi">0</span></p>
+            <p>Steps: <span id="display-steps">0</span></p>
+            <p>Calories Burned: <span id="display-calories">0</span></p>
+            <p>Water Intake: <span id="display-water">0</span> ml</p>
+        </div>
+
+        <!-- Workout Recommendation Section -->
+        <div class="recommendation">
+            <h2>Recommended Workout Plan</h2>
+            <p id="workout-plan">No data yet. Please update your statistics.</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
